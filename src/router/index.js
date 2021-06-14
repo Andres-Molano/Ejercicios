@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Ejercicio1 from '../views/Ejercicio1.vue'
 import Ejercicio2 from '../views/Ejercicio2.vue'
 import Ejercicio4 from '../views/Ejercicio4.vue'
+import Ejercicio6 from '../views/Ejercicio6.vue'
+import Ejercicio7 from '../views/Ejercicio7.vue'
 import Error from '../views/404.vue'
 
 Vue.use(VueRouter)
@@ -28,6 +30,16 @@ const routes = [
     path: '/Ejercicio4',
     name: 'TabBarNavigation',
     component: Ejercicio4,
+  },
+  {
+    path: '/Ejercicio6',
+    name: 'Progress',
+    component: Ejercicio6,
+  },
+  {
+    path: '/Ejercicio7',
+    name: 'Netflix',
+    component: Ejercicio7,
   },
   {
     path: '*',

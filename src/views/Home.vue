@@ -71,11 +71,11 @@ export default {
         },
         {
           nombre: "6. Buld a Step Progress Bar",
-          contenido: "Ejercicio no disponible",
+          contenido: "Ejercicio donde se trabaja una barra progresiva",
         },
         {
           nombre: "7. Página de Netflix",
-          contenido: "Ejercicio no disponible",
+          contenido: "Ejercicio donde se crea una vista similar a la de la plataforma de Netflix.",
         },
         {
           nombre: "8. Testimonials Slider",
@@ -109,6 +109,7 @@ export default {
       this.$router.push(index);
     },
   },
+  
 };
 </script>
 

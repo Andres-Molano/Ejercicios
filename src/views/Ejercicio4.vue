@@ -2,22 +2,30 @@
   <div class="navigation">
     <h1 class="navigation-title">Tab Bar Navigation | JavaScript</h1>
     <div class="navigation-container">
-      <div class="navigation-item active purple">
+      <div
+        class="navigation-item active purple"
+        @click="select('purple')"
+        ref="purple"
+      >
         <i class="navigation-icon fas fa-home"> </i>
         <p class="navigation-name">Home</p>
       </div>
 
-      <div class="navigation-item pink">
+      <div class="navigation-item pink" @click="select('pink')" ref="pink">
         <i class="navigation-icon far fa-heart"> </i>
         <p class="navigation-name">Likes</p>
       </div>
 
-      <div class="navigation-item yellow">
+      <div
+        class="navigation-item yellow"
+        @click="select('yellow')"
+        ref="yellow"
+      >
         <i class="navigation-icon fas fa-search"> </i>
         <p class="navigation-name">Search</p>
       </div>
 
-      <div class="navigation-item teal">
+      <div class="navigation-item teal" @click="select('teal')" ref="teal">
         <i class="navigation-icon far fa-bell"></i>
         <p class="navigation-name">Notifications</p>
       </div>
@@ -25,7 +33,18 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  methods: {
+    select(ref) {
+      const active = document.querySelectorAll(".navigation-item");
+      const item = this.$refs[ref];
+      active.forEach((act) => {
+        act.classList.remove("active");
+      });
+      item.classList.toggle("active");
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
